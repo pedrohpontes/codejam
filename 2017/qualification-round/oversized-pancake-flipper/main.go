@@ -15,12 +15,12 @@ func parsePancakeProblem(line string) ([]pancake, int) {
 	if len(splitSpace) < 2 {
 		panic("wrong input to parse; should have received two strings per line")
 	}
-	pancakesStr := splitSpace[0]
+	pancakes := splitSpace[0]
 	flipperStr := splitSpace[1]
 
-	ps := make([]pancake, len(pancakesStr))
-	for i, pancakeStr := range strings.Split(pancakesStr, "") {
-		ps[i] = pancake(pancakeStr)
+	ps := make([]pancake, len(pancakes))
+	for i, p := range pancakes {
+		ps[i] = pancake(p)
 	}
 
 	flipperSize, err := strconv.Atoi(flipperStr)
