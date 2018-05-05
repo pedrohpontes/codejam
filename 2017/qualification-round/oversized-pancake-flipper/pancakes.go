@@ -1,12 +1,12 @@
 package main
 
 const (
-	happyPancake = "+"
-	blankPancake = "-"
+	happyPancake = '+'
+	blankPancake = '-'
 	panicStr     = "pancakes should be happy or blank"
 )
 
-type pancake string
+type pancake rune
 
 func (p *pancake) flip() {
 	if *p == happyPancake {
